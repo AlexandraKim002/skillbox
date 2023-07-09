@@ -1,20 +1,14 @@
-print("Введите первую точку")
-x01 = float(input('X: '))
-y01 = float(input('Y: '))
+def count_of_digits(n):
+    return len(str(n))
 
-print("\nВведите вторую точку")
-x02 = float(input('X: '))
-y02 = float(input('Y: '))
+def sum_of_digits(n):
+    return sum(int(i) for i in str(n))
 
-x_difference = x01 - x02
-y_difference = y01 - y02
+num = int(input("Введите число: "))
 
-if x_difference == 0:
-    k = 1
+summs = sum_of_digits(num)
+counts = count_of_digits(num)
 
-else:
-    k = y_difference / x_difference
-b = y02 - k * x02
-
-print("Уравнение прямой, проходящей через эти точки:")
-print("y = ", k, " * x + ", b)
+print("Сумма цифр: ", summs)
+print("Кол-во цифр в числе: ", counts)
+print("Разность суммы и кол-ва цифр: ", summs - counts)
