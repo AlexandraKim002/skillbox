@@ -6,15 +6,15 @@ print("\nВведите вторую точку")
 x02 = float(input('X: '))
 y02 = float(input('Y: '))
 
-x_difference = x01 - x02
-y_difference = y01 - y02
+x_difference = x02 - x01
+y_difference = y02 - y01
 
 if x_difference == 0:
-    k = 1
-
+    k = float('inf')  # Vertical line with infinite slope
 else:
     k = y_difference / x_difference
+
 b = y02 - k * x02
 
 print("Уравнение прямой, проходящей через эти точки:")
-print("y = ", k, " * x + ", b)
+print("y =", k, "* x +", b)
